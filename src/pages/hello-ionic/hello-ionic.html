@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Econth CRM App</ion-title>
+    <ion-title>Dashboard</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -11,63 +11,79 @@
 <ion-content padding>
   <ion-grid>
     <ion-row>
-      <ion-col col-12 col-sm>
-        <ion-card color="appointments" >
+      <ion-col col-12 col-sm-4 col-md-6 col-lg-3>
+        <ion-card color="appointments" class="dashboard-appointment">
           <ion-card-header>
             <ion-row>
-              <ion-col col-6>
-                <ion-icon name="bug" style="font-size:80px;"></ion-icon>
+              <ion-col col-xs-8>
+                <ion-icon name="paper" class="font-size-80"></ion-icon>
                </ion-col>
-               <ion-col col-6>
-                Appointments!
-               </ion-col>
-             </ion-row>
-             <ion-row>
-               <ion-col col-offset-8 col-4>
+               <ion-col col-xs-4 text-right padding-top><div class="font-size-40">14</div>
                 Appointments!
                </ion-col>
              </ion-row>
           </ion-card-header>
-         
-          <ion-card-content>
-           View Details
-          </ion-card-content>
+          <button ion-item class="dashboard-appointment-button">
+            <ion-icon name="arrow-round-forward" color="appointments" item-right></ion-icon>
+              view details
+          </button>
         </ion-card>
       </ion-col>
 
-      <ion-col col-12 col-sm>
-        <ion-card color="tasks">
-          <ion-card-header>
-            Pending Tasks!
+      <ion-col col-12 col-sm-4 col-md-6 col-lg-3>
+        <ion-card color="tasks" class="dashboard-task">
+           <ion-card-header>
+            <ion-row>
+              <ion-col col-xs-8>
+                <ion-icon name="mail" class="font-size-80"></ion-icon>
+               </ion-col>
+               <ion-col col-xs-4 text-right padding-top><div class="font-size-40">3</div>
+                Pending Tasks!
+               </ion-col>
+             </ion-row>
           </ion-card-header>
-          <ion-card-content>
-            The British use the term "header", 
-            but the American term "head-shot" the English simply refuse to adopt.
-          </ion-card-content>
+          <button ion-item class="dashboard-task-button">
+            <ion-icon name="arrow-round-forward" color="tasks" item-right></ion-icon>
+              view details
+          </button>
         </ion-card>
       </ion-col>
 
-      <ion-col col-12 col-sm>
-        <ion-card color="comments">
-          <ion-card-header>
-            Comments!
+      <ion-col col-12 col-sm-4 col-md-6 col-lg-3>
+        <ion-card color="comments" class="dashboard-comment">
+           <ion-card-header>
+            <ion-row>
+              <ion-col col-xs-8>
+                <ion-icon name="mail-open" class="font-size-80"></ion-icon>
+               </ion-col>
+               <ion-col col-xs-4 text-right padding-top><div class="font-size-40">23</div>
+                Comments!
+               </ion-col>
+             </ion-row>
           </ion-card-header>
-          <ion-card-content>
-            The British use the term "header", 
-            but the American term "head-shot" the English simply refuse to adopt.
-          </ion-card-content>
+          <button ion-item class="dashboard-comment-button">
+            <ion-icon name="arrow-round-forward" color="comments" item-right></ion-icon>
+              view details
+          </button>
         </ion-card>
       </ion-col>
 
-      <ion-col col-12 col-sm>
-        <ion-card color="complaints" >
+      <ion-col col-12 col-sm-4 col-md-6 col-lg-3>
+        <ion-card color="complaints" class="dashboard-complaint">
           <ion-card-header>
-            Complaints!
+            <ion-row>
+              <ion-col col-xs-8>
+                <ion-icon name="bug" class="font-size-80"></ion-icon>
+               </ion-col>
+               <ion-col col-xs-4 text-right padding-top><div class="font-size-40">8</div>
+                Complaints!
+               </ion-col>
+             </ion-row>
           </ion-card-header>
-          <ion-card-content>
-            The British use the term "header", 
-            but the American term "head-shot" the English simply refuse to adopt.
-          </ion-card-content>
+          <button ion-item class="dashboard-complaint-button">
+            <ion-icon name="arrow-round-forward" color="complaints" item-right></ion-icon>
+              view details
+          </button>
         </ion-card>
       </ion-col>
     </ion-row>

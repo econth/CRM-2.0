@@ -1,3 +1,32 @@
 page-hello-ionic {
-
+    .font-size-40{
+        font-size: 40px;
+    }
+    .font-size-80{
+        font-size:80px;
+    }
+    .dashboard-appointment{
+        border:1px solid #337ab7;
+    }
+    .dashboard-appointment-button{
+        color:#337ab7;
+    }
+     .dashboard-task{
+        border:1px solid rgb(92, 184, 92);
+    }
+    .dashboard-task-button{
+        color:rgb(92, 184, 92);
+    }
+     .dashboard-comment{
+        border:1px solid rgb(240, 173, 78);
+    }
+    .dashboard-comment-button{
+        color:rgb(240, 173, 78);
+    }
+     .dashboard-complaint{
+        border:1px solid rgb(217, 83, 79);
+    }
+    .dashboard-complaint-button{
+        color:rgb(217, 83, 79);
+    }
 }
