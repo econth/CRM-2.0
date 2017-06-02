@@ -88,9 +88,69 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <p>
+  
+ <!-- <p>
     <button ion-button color="primary" menuToggle>Toggle Menu</button>
-  </p>
-  <i class="fa fa-camera-retro fa-lg"></i>
+  </p> -->
+  
 
+   <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-12 col-md-6>
+        <ion-card>
+          <ion-card-header class="panel-heading" no-padding>
+             <ion-card-title> <i class="fa fa-clock-o fa-fw"></i>Task Panel</ion-card-title>
+          </ion-card-header>
+          <ion-list>
+            <button ion-item>
+                <ion-icon><i class="fa fa-clock-o fa-fw"></i></ion-icon>
+                    Calendar Updated
+                <ion-badge item-right>2 days ago</ion-badge>
+            </button>
+          
+            <button ion-item>
+              <ion-icon><i class="fa fa-clock-o fa-fw"></i></ion-icon>
+                  New notification
+              <ion-badge item-right>now</ion-badge>
+            </button>
+          </ion-list>  
+          <ion-card-content text-right>
+               <a href="#">View All Activity <i class="fa fa-arrow-circle-right"></i></a>
+            </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col col-12 col-sm-12 col-md-6>
+        <ion-card>
+          <ion-card-header class="panel-heading" no-padding>
+            <ion-card-title><i class="fa fa-money"></i> Recent Transactions</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <table>
+              <tr>
+                <th>Date</th>
+                <th>Invoice No.</th>
+                <th>Customer Name</th>
+                <th>Appointment No.</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>123456</td>
+                <td>Parthiban</td>
+                <td>234567</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>1234</td>
+                <td>Praveen</td>
+                <td>23456723232</td>
+              </tr>
+            </table> 
+          </ion-card-content>
+          <ion-card-content text-right>
+              <a href="#">View All Transactions <i class="fa fa-arrow-circle-right"></i></a>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+   </ion-grid>
 </ion-content>
