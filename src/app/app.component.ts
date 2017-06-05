@@ -17,7 +17,13 @@ export class MyApp {
 
   // make HelloIonicPage the root (or first) page
   rootPage = HelloIonicPage;
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string}>;
+
+  showSubmenu: boolean = false;
+
+menuItemHandler(): void {
+  this.showSubmenu = !this.showSubmenu;
+}
 
   constructor(
     public platform: Platform,
@@ -29,8 +35,17 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'DashBoard', component: HelloIonicPage },
-      { title: 'My First List', component: ListPage }
+      { title: 'Dashboard',        component: HelloIonicPage ,icon:'fa-dashboard'},
+      { title: 'My First List',    component: ListPage,       icon:'fa-dashboard' },
+      { title: 'Book Appointment', component: ListPage,       icon:'fa-sticky-note-o' },
+      { title: 'Appointments',     component: ListPage,       icon:'fa-sticky-note-o' },
+      { title: 'Customer',         component: HelloIonicPage, icon:'fa-gift' },
+      { title: 'Employees',        component: ListPage,       icon:'fa-globe' },
+      { title: 'Accounts',         component: HelloIonicPage, icon:'fa-user' },
+      { title: 'Invoices',         component: ListPage,       icon:'fa-history' },
+      { title: 'Reports',          component: HelloIonicPage, icon:'fa-file-text' },
+      { title: 'Signout',          component: ListPage,       icon:'fa-sign-out' }
+      
     ];
   }
 

@@ -7,11 +7,23 @@
   </ion-header>
 
   <ion-content>
-    <ion-list>
-      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
+     <ion-list id="sidenav">
+    <!-- other menu items will go here -->
+      <ion-item (click)="menuItemHandler()">Main Menu</ion-item>
+      <ion-item submenu-item *ngIf="showSubmenu">Sub menu item</ion-item>
+      <ion-item submenu-item *ngIf="showSubmenu">Sub menu item</ion-item>
+      <ion-item submenu-item *ngIf="showSubmenu">Sub menu item</ion-item>
+      <!-- other menu items will go here -->
+       <ion-item (click)="menuItemHandler()">Main Menu</ion-item>
+      <ion-item submenu-item *ngIf="showSubmenu">Sub menu item</ion-item>
+      <ion-item submenu-item *ngIf="showSubmenu">Sub menu item</ion-item>
+      <ion-item submenu-item *ngIf="showSubmenu">Sub menu item</ion-item>
     </ion-list>
+    <ion-list>
+      <button ion-item *ngFor="let p of pages" (click)="openPage(p)"><i class="fa {{p.icon}} fa-lg"></i> {{p.title}}</button>
+    </ion-list>
+
+   
   </ion-content>
 
   <ion-footer>
