@@ -18,7 +18,6 @@ div.heading{
     padding: 0 18px;
 }
 
-ion-item[submenu-item] {
-    padding-left: 25px; // maybe margin-left would work better to move the border as well
-    color: #ccc;
+button[submenu-item] {
+    margin-left: 30px; // maybe margin-left would work better to move the border as well
   }
