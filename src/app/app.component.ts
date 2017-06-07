@@ -17,13 +17,9 @@ export class MyApp {
 
   // make HelloIonicPage the root (or first) page
   rootPage = HelloIonicPage;
-  pages: Array<{title: string, type: string, component: any, icon: string, children?:Array<{title: string, component: any, icon: string}>}>;
+  pages: Array<{title: string, type: string,id:string, component: any, icon: string, children?:Array<{title: string, component: any, icon: string}>}>;
 
   showSubmenu: boolean = false;
-
-menuItemHandler(): void {
-  this.showSubmenu = !this.showSubmenu;
-}
 
   constructor(
     public platform: Platform,
@@ -35,16 +31,16 @@ menuItemHandler(): void {
 
     // set our app's pages
     this.pages = [
-      { title: 'Dashboard',       type: 'button', component: HelloIonicPage ,icon:'fa-dashboard'},
-      { title: 'My First List',   type: 'button', component: ListPage,       icon:'fa-sticky-note-o'},
-      { title: 'Book Appointment',type: 'button', component: ListPage,       icon:'fa-sticky-note-o'},
-      { title: 'Appointments',    type: 'button', component: ListPage,       icon:'fa-sticky-note-o'},
-      { title: 'Customer',        type: 'submenu',component: HelloIonicPage, icon:'fa-gift',         children:[{title: 'Add Customer',component: HelloIonicPage ,icon:''}, {title: 'Search Customer',component: HelloIonicPage ,icon:''}, {title: 'Inactive Customers',component: HelloIonicPage ,icon:''}] },
-      { title: 'Employees',       type: 'submenu',component: ListPage,       icon:'fa-globe',        children:[{title: 'Add Employee',component: HelloIonicPage ,icon:''}, {title: 'Search Employee',component: HelloIonicPage ,icon:''}, {title: 'Inactive Employees',component: HelloIonicPage ,icon:''}] },
-      { title: 'Accounts',        type: 'button', component: HelloIonicPage, icon:'fa-user'},
-      { title: 'Invoices',        type: 'button', component: ListPage,       icon:'fa-history'},
-      { title: 'Reports',         type: 'button', component: HelloIonicPage, icon:'fa-file-text'},
-      { title: 'Signout',         type: 'button', component: ListPage,       icon:'fa-sign-out'}
+      { title: 'Dashboard',       type: 'button', id:"dashboard",     component: HelloIonicPage ,icon:'fa-dashboard'},
+      { title: 'My First List',   type: 'button', id:"firstlist",     component: ListPage,       icon:'fa-sticky-note-o'},
+      { title: 'Book Appointment',type: 'button', id:"bookapp" ,      component: ListPage,       icon:'fa-sticky-note-o'},
+      { title: 'Appointments',    type: 'button', id:"appointments" , component: ListPage,       icon:'fa-sticky-note-o'},
+      { title: 'Customer',        type: 'submenu',id:"customer" ,     component: HelloIonicPage, icon:'fa-gift',         children:[{title: 'Add Customer',component: HelloIonicPage ,icon:''}, {title: 'Search Customer',component: HelloIonicPage ,icon:''}, {title: 'Inactive Customers',component: HelloIonicPage ,icon:''}] },
+      { title: 'Employees',       type: 'submenu',id:"employees" ,    component: ListPage,       icon:'fa-globe',        children:[{title: 'Add Employee',component: HelloIonicPage ,icon:''}, {title: 'Search Employee',component: HelloIonicPage ,icon:''}, {title: 'Inactive Employees',component: HelloIonicPage ,icon:''}] },
+      { title: 'Accounts',        type: 'button', id:"acoounts" ,     component: HelloIonicPage, icon:'fa-user'},
+      { title: 'Invoices',        type: 'button', id:"invoices" ,     component: ListPage,       icon:'fa-history'},
+      { title: 'Reports',         type: 'button', id:"reports" ,      component: HelloIonicPage, icon:'fa-file-text'},
+      { title: 'Signout',         type: 'button', id:"signout" ,      component: ListPage,       icon:'fa-sign-out'}
       
     ];
   }
@@ -59,7 +55,9 @@ menuItemHandler(): void {
   }
 
   openPage(page) {
-    if(page.title==="Customer" || page.title==="Employees"){
+    if(page.title==="Customer" ){
+       this.showSubmenu = !this.showSubmenu;
+    }else if(page.title==="Employees"){
        this.showSubmenu = !this.showSubmenu;
     }else{
       // close the menu when clicking a link from the menu

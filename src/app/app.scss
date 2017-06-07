@@ -21,3 +21,12 @@ div.heading{
 button[submenu-item] {
     margin-left: 30px; // maybe margin-left would work better to move the border as well
   }
+
+#menu_customer .item-inner,#menu_employees .item-inner{
+    border-bottom: 1px solid #ffffff;
+}
+
+#menu_customer~ion-list{
+    display: none;
+}
+
