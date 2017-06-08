@@ -54,7 +54,8 @@ export class MyApp {
     });
   }
 
-  openPage(page) {
+  openPage(page,index) {
+    console.log("i",index);
     if(page.title==="Customer" ){
        this.showSubmenu = !this.showSubmenu;
     }else if(page.title==="Employees"){
